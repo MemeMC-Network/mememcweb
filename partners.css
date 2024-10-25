@@ -9,7 +9,6 @@ body {
     background: linear-gradient(to right, #4A90E2, #50E3C2);
     color: #333;
 }
-
 nav {
     background: #222;
     background: #333;
@@ -40,12 +39,6 @@ padding: 10px 15px;
 transition: color 0.3s, transform 0.3s;
     font-weight: bold; /* Make links bold */
 }
-
-.nav-links a:hover {
-color: #50E3C2;
-transform: scale(1.1);
-}
-
 .container {
     max-width: 900px;
     margin: 50px auto;
@@ -64,18 +57,6 @@ h2 {
     font-size: 2.5em;
     margin-bottom: 10px;
     color: #4A90E2;
-/* Underline effect */
-.nav-links a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #50E3C2;
-    transition: width 0.3s;
-    position: absolute;
-    bottom: -5px; /* Adjust as needed */
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 main {
@@ -115,6 +96,4 @@ footer {
     color: white;
     border-radius: 0 0 10px 10px;
     margin-top: 20px;
-.nav-links a:hover::after {
-    width: 100%;
 }
