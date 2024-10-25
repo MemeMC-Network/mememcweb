@@ -11,12 +11,12 @@ body {
 }
 
 nav {
-    background: #222;
+    background: linear-gradient(90deg, #1d1d1d, #4A4A4A);
     padding: 15px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .nav-container {
@@ -27,8 +27,7 @@ nav {
 
 .nav-title {
     color: #ffffff;
-    font-size: 2.2em;
-    letter-spacing: 1px;
+    font-size: 2em; /* Updated font size */
 }
 
 .nav-links {
@@ -44,12 +43,29 @@ nav {
     color: #ffffff;
     text-decoration: none;
     padding: 10px 15px;
-    transition: color 0.3s, transform 0.3s;
+    border-radius: 5px; /* Added border radius */
+    position: relative; /* Added position relative */
+    transition: color 0.3s; /* Updated transition properties */
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #50E3C2; /* Added underline effect */
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transition: transform 0.3s;
 }
 
 .nav-links a:hover {
-    color: #50E3C2;
-    transform: scale(1.1);
+    color: #50E3C2; /* Updated hover color */
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1); /* Added underline effect on hover */
 }
 
 .container {
