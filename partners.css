@@ -9,36 +9,49 @@ body {
     background: linear-gradient(to right, #4A90E2, #50E3C2);
     color: #333;
 }
+
 nav {
     background: #222;
-    background: #333;
-padding: 15px 20px;
-position: sticky;
-top: 0;
-z-index: 1000;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: background 0.3s;
-}
-
-nav:hover {
-    background: #444; /* Darker on hover */
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .nav-container {
-@@ -38,75 +31,36 @@ nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-title {
+    color: #ffffff;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
 
 .nav-links li {
-margin-left: 30px;
-    position: relative; /* For underline effect */
+    margin-left: 30px;
 }
 
 .nav-links a {
-color: #ffffff;
-text-decoration: none;
-padding: 10px 15px;
-transition: color 0.3s, transform 0.3s;
-    font-weight: bold; /* Make links bold */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s, transform 0.3s;
 }
+
+.nav-links a:hover {
+    color: #50E3C2;
+    transform: scale(1.1);
+}
+
 .container {
     max-width: 900px;
     margin: 50px auto;
