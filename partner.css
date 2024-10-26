@@ -11,6 +11,9 @@ body {
 }
 
 nav {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;    
     background: linear-gradient(90deg, #1d1d1d, #4A4A4A);
     padding: 15px 20px;
     position: sticky;
@@ -26,20 +29,30 @@ nav {
 }
 
 .nav-title {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
     color: #ffffff;
     font-size: 2em; /* Updated font size */
 }
 
 .nav-links {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
     list-style: none;
     display: flex;
 }
 
 .nav-links li {
+    
     margin-left: 30px;
 }
 
 .nav-links a {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
     color: #ffffff;
     text-decoration: none;
     padding: 10px 15px;
@@ -61,10 +74,16 @@ nav {
 }
 
 .nav-links a:hover {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;   
     color: #50E3C2; /* Updated hover color */
 }
 
 .nav-links a:hover::after {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;   
     transform: scaleX(1); /* Added underline effect on hover */
 }
 
