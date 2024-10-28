@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+}
+
+.game-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.game-card {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.game-card:hover {
+    background-color: #45a049;
+}
+
+.game-container iframe {
+    width: 80vw;
+    height: 80vh;
+    border: none;
+    margin-top: 20px;
+}
