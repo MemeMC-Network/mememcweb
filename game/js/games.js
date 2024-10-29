@@ -3,7 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const gameUrls = {
         "game1": "https://class198.github.io/g/top-speed-racing-3d/",  // Replace with actual game URLs
-        "game2": "https://class198.github.io/g/drift-hunters"
+        "game2": "https://class198.github.io/g/drift-hunters",
+        "game3": "https://class198.github.io/g/tiny-fishing/",
+        "game4": "https://class198.github.io/g177/skibidi-shooter/",
+        "game5": "https://class198.github.io/g/ovo/"
     };
 
     const iframe = document.getElementById("gameFrame");
