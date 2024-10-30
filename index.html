@@ -13,9 +13,12 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 <body class="relative min-h-screen flex flex-col">
+    <!-- Background Image -->
     <div class="absolute inset-0 z-0 bg-cover bg-center" style="background-image: url('images/bg.png');">
         <div class="absolute inset-0 bg-zinc-900 opacity-75"></div>
     </div>
+
+    <!-- Main Content -->
     <div class="relative z-10 flex-grow flex items-center justify-center text-white p-4">
         <div class="w-full max-w-lg text-center">
             <img src="images/logo.png" alt="Logo" class="w-3/4 max-w-[20rem] h-auto object-contain mx-auto">
@@ -27,11 +30,14 @@
             </div>
         </div>
     </div>
-    <footer class="text-white text-center py-4">
-        <iframe style="width:728px; height:90px; max-width:100%; border:none; display:block; margin:auto;" 
-                src="https://namemc.com/server/mememc.club/embed" 
-                width="728" 
-                height="90">
+
+    <!-- Footer -->
+    <footer class="relative z-10 text-white text-center py-4">
+        <iframe 
+            style="width:728px; height:90px; max-width:100%; border:none; display:block; margin:auto;" 
+            src="https://namemc.com/server/mememc.club/embed" 
+            width="728" 
+            height="90">
         </iframe>
     </footer>
 </body>
