@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "game3": "https://class198.github.io/g/tiny-fishing/",
         "game4": "https://class198.github.io/g177/skibidi-shooter/",
         "game5": "https://class198.github.io/g/ovo/"
+        "game6": "http://b.anolink.ru/newga/russian-car-driver-hd1/"
     };
 
     const iframe = document.getElementById("gameFrame");
