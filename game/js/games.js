@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
         "game3": "https://class811.github.io/g/tiny-fishing/",
         "game4": "https://class811.github.io/g177/skibidi-shooter/",
         "game5": "https://class811.github.io/g/ovo/",
-        "game6": "https://class811.github.io/g3/stick-merge/"
+        "game6": "https://class811.github.io/g3/stick-merge/",
+        "game7": "https://www.y8.com/games/slope",
+        "game8": "https://retro-bowl.com/play/"
     };
 
     const iframe = document.getElementById("gameFrame");
