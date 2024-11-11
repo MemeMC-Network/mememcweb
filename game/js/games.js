@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "game5": "https://class811.github.io/g/ovo/",
         "game6": "https://class811.github.io/g3/stick-merge/",
         "game7": "https://www.y8.com/games/slope",
-        "game8": "https://retro-bowl.com/play/"
+        "game8": "https://game316009.konggames.com/gamez/0031/6009/live/index.html/"
     };
 
     const iframe = document.getElementById("gameFrame");
