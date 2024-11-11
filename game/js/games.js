@@ -12,7 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "game8": "https://game316009.konggames.com/gamez/0031/6009/live/index.html/",
         "game9": "https://script.google.com/a/macros/my.npsct.org/s/AKfycbw6e8fflbfydV7kom5id09nKaM6ix0hLlXHbs3XHOnxzrndUgPtHUHENrwKomI2Hpk3/exec",
         "game10": "https://burritobisononline.github.io/file/",
-        "game11": "https://spew45.github.io/simple-games-assets/src/rooftop-snipers/"
+        "game11": "https://spew45.github.io/simple-games-assets/src/rooftop-snipers/",
+        "game12": "https://spew45.github.io/simple-games-assets/src/basket-random/"
     };
 
     const iframe = document.getElementById("gameFrame");
