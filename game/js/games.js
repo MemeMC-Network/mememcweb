@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const gameUrls = {
         "game1": "https://kenrick95.github.io/c4/",  // Replace with actual game URLs
-        "game2": "https://class198.github.io/g/drift-hunters",
-        "game3": "https://class198.github.io/g/tiny-fishing/",
-        "game4": "https://class198.github.io/g177/skibidi-shooter/",
-        "game5": "https://class198.github.io/g/ovo/"
-        "game6": "http://b.anolink.ru/newga/russian-car-driver-hd1/"
+        "game2": "https://class811.github.io/g/drift-hunters",
+        "game3": "https://class811.github.io/g/tiny-fishing/",
+        "game4": "https://class811.github.io/g177/skibidi-shooter/",
+        "game5": "https://class811.github.io/g/ovo/"
+        "game6": "https://class811.github.io/g3/stick-merge/"
     };
 
     const iframe = document.getElementById("gameFrame");
