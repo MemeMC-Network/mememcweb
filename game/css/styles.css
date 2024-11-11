@@ -1,6 +1,7 @@
 /* Import Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -9,26 +10,36 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #0d0d0d;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     color: #fff;
     text-align: center;
     overflow-x: hidden;
 }
 
-/* Header */
-.header {
-    padding: 20px;
-    color: #00ffcc;
-    text-shadow: 0 0 10px #00ffcc;
+/* Background Animation */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
+    backdrop-filter: blur(10px);
+    z-index: -1;
+    animation: gradientMove 10s infinite alternate;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
 }
 
 .header h1 {
+    margin-top: 20px;
     font-size: 2.5rem;
-}
-
-.header p {
-    font-size: 1.2rem;
-    color: #888;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
 }
 
 /* Game Gallery */
@@ -40,91 +51,78 @@ body {
     padding: 20px;
 }
 
-/* Game Card */
 .game-card {
-    position: relative;
     width: 200px;
     height: 200px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
+    backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #00ffcc;
+    text-shadow: 0 0 5px #00ffcc;
     cursor: pointer;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    transition: transform 0.4s, box-shadow 0.4s;
-    overflow: hidden;
-    backdrop-filter: blur(10px);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.game-card::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    background: linear-gradient(45deg, #00ffcc, #ff00cc);
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
 .game-card:hover {
-    transform: perspective(1000px) rotateY(5deg) rotateX(-5deg) scale(1.05);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
-}
-
-.game-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 15px;
-    background: linear-gradient(45deg, #00ffcc, #ff00cc);
-    opacity: 0.1;
-    transition: opacity 0.3s;
-}
-
-.game-card:hover::before {
-    opacity: 0.3;
-}
-
-/* Game Title */
-.game-title {
-    font-size: 1.2rem;
-    color: #fff;
-    text-shadow: 0 0 10px #00ffcc;
-    position: relative;
-    z-index: 1;
-    transition: opacity 0.3s;
-}
-
-.game-card:hover .game-title {
-    opacity: 1;
-}
-
-/* Tooltip */
-.game-card[title] {
-    position: relative;
-}
-
-.game-card[title]::after {
-    content: attr(title);
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.3s, bottom 0.3s;
-    pointer-events: none;
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
 .game-card:hover::after {
     opacity: 1;
-    bottom: -40px;
+}
+
+/* Game Container */
+.game-container iframe {
+    width: 90vw;
+    height: 85vh;
+    border: 3px solid #00ffcc;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+
+/* Back Button */
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00ffcc;
+    color: #1e1e2f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-button:hover {
+    background-color: #ff00cc;
+    transform: translateY(-5px);
 }
 
 /* Footer */
 footer {
     padding: 10px;
-    background-color: #1a1a2e;
+    background-color: #282a36;
     color: #888;
     font-size: 0.9rem;
 }
