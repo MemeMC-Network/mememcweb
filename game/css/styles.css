@@ -9,7 +9,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #0d0d0d;
+    background: #0a0a0a;
     color: #fff;
     text-align: center;
     overflow-x: hidden;
@@ -27,7 +27,7 @@ body {
 }
 
 .header p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #888;
 }
 
@@ -43,82 +43,55 @@ body {
 /* Game Card */
 .game-card {
     position: relative;
-    width: 200px;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 180px;
+    height: 180px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    transition: transform 0.4s, box-shadow 0.4s;
-    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
     backdrop-filter: blur(10px);
+    overflow: hidden;
 }
 
 .game-card:hover {
-    transform: perspective(1000px) rotateY(5deg) rotateX(-5deg) scale(1.05);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
 }
 
-.game-card::before {
-    content: '';
+/* Game Overlay */
+.game-overlay {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 15px;
-    background: linear-gradient(45deg, #00ffcc, #ff00cc);
-    opacity: 0.1;
-    transition: opacity 0.3s;
+    transition: background 0.3s;
 }
 
-.game-card:hover::before {
-    opacity: 0.3;
+.game-card:hover .game-overlay {
+    background: rgba(0, 0, 0, 0.6);
 }
 
 /* Game Title */
 .game-title {
+    position: absolute;
+    color: #00ffcc;
     font-size: 1.2rem;
-    color: #fff;
+    font-weight: 600;
     text-shadow: 0 0 10px #00ffcc;
-    position: relative;
     z-index: 1;
-    transition: opacity 0.3s;
+    pointer-events: none; /* Ensures text is not blocked by hover effects */
+    transition: transform 0.3s;
 }
 
 .game-card:hover .game-title {
-    opacity: 1;
-}
-
-/* Tooltip */
-.game-card[title] {
-    position: relative;
-}
-
-.game-card[title]::after {
-    content: attr(title);
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.3s, bottom 0.3s;
-    pointer-events: none;
-}
-
-.game-card:hover::after {
-    opacity: 1;
-    bottom: -40px;
+    transform: translateY(-5px);
 }
 
 /* Footer */
