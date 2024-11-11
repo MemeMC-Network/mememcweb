@@ -1,128 +1,83 @@
-/* Import Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: #fff;
-    text-align: center;
-    overflow-x: hidden;
-}
-
-/* Background Animation */
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
-    backdrop-filter: blur(10px);
-    z-index: -1;
-    animation: gradientMove 10s infinite alternate;
-}
-
-@keyframes gradientMove {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 100% 100%; }
-}
-
-.header h1 {
-    margin-top: 20px;
-    font-size: 2.5rem;
-    color: #00ffcc;
-    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
-}
-
-/* Game Gallery */
-.game-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.game-card {
-    width: 200px;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #00ffcc;
-    text-shadow: 0 0 5px #00ffcc;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
-}
-
-.game-card::after {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    border-radius: 15px;
-    border: 2px solid transparent;
-    background: linear-gradient(45deg, #00ffcc, #ff00cc);
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.game-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-}
-
-.game-card:hover::after {
-    opacity: 1;
-}
-
 /* Game Container */
+.game-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .game-container iframe {
     width: 90vw;
-    height: 85vh;
-    border: 3px solid #00ffcc;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    margin-top: 20px;
+    height: 80vh;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 /* Back Button */
 .back-button {
+    display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #00ffcc;
-    color: #1e1e2f;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
     font-size: 1rem;
+    font-weight: 600;
+    color: #00ffcc;
+    background-color: #1a1a2e;
+    border: 2px solid #00ffcc;
+    border-radius: 10px;
+    cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .back-button:hover {
-    background-color: #ff00cc;
-    transform: translateY(-5px);
+    background-color: #00ffcc;
+    color: #1a1a2e;
+    transform: translateY(-3px);
+}
+
+/* Header for Games Page */
+.header {
+    padding: 20px;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+}
+
+.header p {
+    font-size: 1.1rem;
+    color: #888;
 }
 
 /* Footer */
 footer {
     padding: 10px;
-    background-color: #282a36;
+    background-color: #1a1a2e;
     color: #888;
     font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .game-container iframe {
+        width: 95vw;
+        height: 70vh;
+    }
+
+    .back-button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
 }
