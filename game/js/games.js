@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const gameName = localStorage.getItem("selectedGame");
 
     const gameUrls = {
-        "game1": "https://class198.github.io/g/top-speed-racing-3d/",  // Replace with actual game URLs
+        "game1": "https://kenrick95.github.io/c4/",  // Replace with actual game URLs
         "game2": "https://class198.github.io/g/drift-hunters",
         "game3": "https://class198.github.io/g/tiny-fishing/",
         "game4": "https://class198.github.io/g177/skibidi-shooter/",
