@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "game7": "https://firespread01.github.io/slope/",
         "game8": "https://game316009.konggames.com/gamez/0031/6009/live/index.html/",
         "game9": "https://script.google.com/a/macros/my.npsct.org/s/AKfycbw6e8fflbfydV7kom5id09nKaM6ix0hLlXHbs3XHOnxzrndUgPtHUHENrwKomI2Hpk3/exec",
-        "game10": "https://burritobisononline.github.io/file/"
+        "game10": "https://burritobisononline.github.io/file/",
+        "game11": "https://spew45.github.io/simple-games-assets/src/rooftop-snipers/"
     };
 
     const iframe = document.getElementById("gameFrame");
