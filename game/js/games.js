@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "game10": "https://burritobisononline.github.io/file/",
         "game11": "https://spew45.github.io/simple-games-assets/src/rooftop-snipers/",
         "game12": "https://spew45.github.io/simple-games-assets/src/basket-random/",
-        "game13": "https://spew45.github.io/simple-games-assets/src/soccer-random/"
+        "game13": "https://spew45.github.io/simple-games-assets/src/soccer-random/",
+        "game14": "https://swordslasher.com/games/ugi7ftbv2kgodcq7vful9u9v34wein5z/index.html"
     };
 
     const iframe = document.getElementById("gameFrame");
