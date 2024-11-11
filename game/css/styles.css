@@ -1,6 +1,7 @@
 /* Import Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+/* Universal Styles */
 * {
     margin: 0;
     padding: 0;
@@ -86,12 +87,50 @@ body {
     font-weight: 600;
     text-shadow: 0 0 10px #00ffcc;
     z-index: 1;
-    pointer-events: none; /* Ensures text is not blocked by hover effects */
+    pointer-events: none;
     transition: transform 0.3s;
 }
 
 .game-card:hover .game-title {
     transform: translateY(-5px);
+}
+
+/* Game Container */
+.game-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.game-container iframe {
+    width: 90vw;
+    height: 80vh;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Back Button */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #00ffcc;
+    background-color: #1a1a2e;
+    border: 2px solid #00ffcc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+    background-color: #00ffcc;
+    color: #1a1a2e;
+    transform: translateY(-3px);
 }
 
 /* Footer */
@@ -100,4 +139,26 @@ footer {
     background-color: #1a1a2e;
     color: #888;
     font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .game-card {
+        width: 150px;
+        height: 150px;
+    }
+
+    .game-title {
+        font-size: 1rem;
+    }
+
+    .game-container iframe {
+        width: 95vw;
+        height: 70vh;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
 }
