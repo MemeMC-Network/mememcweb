@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "game9": "https://script.google.com/a/macros/my.npsct.org/s/AKfycbw6e8fflbfydV7kom5id09nKaM6ix0hLlXHbs3XHOnxzrndUgPtHUHENrwKomI2Hpk3/exec",
         "game10": "https://burritobisononline.github.io/file/",
         "game11": "https://spew45.github.io/simple-games-assets/src/rooftop-snipers/",
-        "game12": "https://spew45.github.io/simple-games-assets/src/basket-random/"
+        "game12": "https://spew45.github.io/simple-games-assets/src/basket-random/",
+        "game13": "https://spew45.github.io/simple-games-assets/src/soccer-random/"
     };
 
     const iframe = document.getElementById("gameFrame");
