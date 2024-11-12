@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "game12": "https://spew45.github.io/simple-games-assets/src/basket-random/",
         "game13": "https://spew45.github.io/simple-games-assets/src/soccer-random/",
         "game14": "https://swordslasher.com/games/ugi7ftbv2kgodcq7vful9u9v34wein5z/index.html",
-        "game15": "https://firespread01.github.io/cookieclicker/"
         "game16": "https://hypackel.github.io/fork/0/g/stickmanhook/game/index.html"
     };
 
