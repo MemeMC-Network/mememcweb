@@ -1,12 +1,14 @@
 /* Import Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
     font-family: 'Poppins', sans-serif;
     background: #0a0a0a;
@@ -14,6 +16,7 @@ body {
     text-align: center;
 }
 
+/* Header */
 .header {
     padding: 20px;
     color: #00ffcc;
@@ -28,6 +31,7 @@ body {
     color: #888;
 }
 
+/* Game Gallery */
 .game-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -47,8 +51,8 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
     backdrop-filter: blur(10px);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .game-card:hover {
@@ -56,6 +60,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
 }
 
+/* Game Overlay */
 .game-overlay {
     position: absolute;
     top: 0;
@@ -66,6 +71,7 @@ body {
     border-radius: 15px;
 }
 
+/* Game Title */
 .game-title {
     position: absolute;
     color: #00ffcc;
@@ -75,6 +81,7 @@ body {
     z-index: 1;
 }
 
+/* Game Container */
 .game-container iframe {
     width: 90vw;
     height: 80vh;
@@ -82,6 +89,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
 }
 
+/* Back Button */
 .back-button {
     margin-top: 20px;
     padding: 10px 20px;
@@ -91,7 +99,7 @@ body {
     border: 2px solid #00ffcc;
     border-radius: 10px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background 0.3s, color 0.3s;
 }
 
 .back-button:hover {
@@ -99,6 +107,7 @@ body {
     color: #1a1a2e;
 }
 
+/* Footer */
 footer {
     padding: 10px;
     background: #1a1a2e;
