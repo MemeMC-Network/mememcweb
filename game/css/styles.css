@@ -11,8 +11,8 @@
 /* Body Styling */
 body, html {
     font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle, #1a1f3d, #0b0d1c);
-    color: #f3f4f6;
+    background: radial-gradient(circle, #121417, #0f0f2d); /* Darker background for a more atmospheric feel */
+    color: #f5f5f5;
     text-align: center;
     line-height: 1.6;
     height: 100%;
@@ -29,27 +29,34 @@ body, html {
 
 /* Header */
 .header {
-    padding: 30px;
-    color: #ff7b2b;
-    text-shadow: 0 0 10px rgba(255, 123, 43, 0.7);
-    animation: slideDown 1s ease forwards;
+    padding: 40px;
+    color: #ff8c00;
+    text-shadow: 0 0 12px #ff8c00, 0 0 24px #ff8c00;
+    animation: textGlow 1.5s ease-in-out infinite alternate, headerFadeIn 1.2s ease-out forwards;
 }
 
 .header h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
     letter-spacing: 1.5px;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    font-weight: 600;
 }
 
 .header p {
-    color: #ccc;
+    color: #aaa;
     font-weight: 300;
 }
 
-/* Slide-Down Animation */
-@keyframes slideDown {
-    from { transform: translateY(-20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+/* Text Glow Animation */
+@keyframes textGlow {
+    0% { text-shadow: 0 0 8px #ff8c00, 0 0 20px #ff8c00; }
+    100% { text-shadow: 0 0 25px #ff8c00, 0 0 50px #ff8c00; }
+}
+
+/* Header Fade-In */
+@keyframes headerFadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Game Gallery */
@@ -57,40 +64,47 @@ body, html {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    padding: 30px 20px;
-    animation: fadeInUp 1.5s ease forwards;
+    gap: 25px;
+    padding: 40px 25px;
+    animation: galleryFadeIn 1s ease-out forwards;
     flex-grow: 1;
+}
+
+/* Gallery Fade-In Animation */
+@keyframes galleryFadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Game Card */
 .game-card {
     position: relative;
-    width: 180px;
-    height: 180px;
-    background: rgba(255, 255, 255, 0.08);
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.25);
     border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-    animation: popIn 0.6s ease forwards;
+    animation: cardPopIn 0.8s ease forwards;
     overflow: hidden;
 }
 
-.game-card:hover {
-    transform: scale(1.08) rotate(2deg);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-    background: rgba(51, 170, 255, 0.15);
+/* Game Card Pop-In Animation */
+@keyframes cardPopIn {
+    0% { transform: scale(0.85); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
 }
 
-/* Pop-In Animation for Game Card */
-@keyframes popIn {
-    0% { transform: scale(0.9); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
+/* Game Card Hover */
+.game-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    background: rgba(51, 170, 255, 0.2);
 }
 
 /* Game Overlay */
@@ -100,7 +114,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.35);
     border-radius: 15px;
     transition: background 0.3s ease;
     opacity: 0;
@@ -112,30 +126,42 @@ body, html {
     opacity: 1;
 }
 
+/* Overlay Fade-In Animation */
+@keyframes overlayFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 /* Game Title */
 .game-title {
     position: absolute;
-    color: #ff6b35;
-    font-size: 1.3rem;
-    font-weight: 600;
-    text-shadow: 0 0 10px rgba(255, 107, 53, 0.8);
+    color: #ff8c00;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-shadow: 0 0 12px #ff8c00;
     z-index: 1;
-    animation: float 2s infinite ease-in-out;
+    animation: titleFloat 2s infinite ease-in-out, titleGlow 1.5s ease-in-out infinite alternate;
 }
 
 /* Float Animation for Game Title */
-@keyframes float {
+@keyframes titleFloat {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-8px); }
 }
 
+/* Title Glow Effect */
+@keyframes titleGlow {
+    0% { text-shadow: 0 0 10px #ff8c00, 0 0 25px #ff8c00; }
+    100% { text-shadow: 0 0 30px #ff8c00, 0 0 50px #ff8c00; }
+}
+
 /* Game Container */
 .game-container iframe {
-    width: 85vw;
+    width: 90vw;
     height: 75vh;
-    border-radius: 15px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
-    animation: fadeInScale 1.2s ease forwards;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    animation: fadeInScale 1.4s ease-in-out forwards;
 }
 
 /* Fade-In Scale for Game Container */
@@ -146,67 +172,61 @@ body, html {
 
 /* Back Button */
 .back-button {
-    margin-top: 20px;
+    margin-top: 25px;
     padding: 12px 24px;
-    font-size: 1rem;
-    color: #ff6b35;
+    font-size: 1.1rem;
+    color: #ff8c00;
     background: #162540;
-    border: 2px solid #ff6b35;
+    border: 2px solid #ff8c00;
     border-radius: 12px;
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
-    animation: bounce 2s infinite;
+    animation: buttonHoverEffect 1s ease-in-out forwards;
 }
 
 .back-button:hover {
-    background: #ff6b35;
+    background: #ff8c00;
     color: #162540;
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 }
 
-/* Bounce Animation for Back Button */
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-3px); }
+/* Hover Effect for Back Button */
+@keyframes buttonHoverEffect {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+    100% { transform: translateY(0); }
 }
 
 /* Footer */
 footer {
-    padding: 15px;
+    padding: 18px;
     background: #162540;
     color: #aaa;
-    font-size: 0.9rem;
+    font-size: 1rem;
     text-align: center;
     border-top: 1px solid #333;
     letter-spacing: 0.5px;
-    animation: slideUp 1.2s ease forwards;
+    animation: footerSlideUp 1.4s ease-out forwards;
     width: 100%;
     position: relative;
     bottom: 0;
     margin-top: auto;
 }
 
-/* Slide-Up Animation */
-@keyframes slideUp {
-    from { transform: translateY(20px); opacity: 0; }
+/* Footer Slide-Up Animation */
+@keyframes footerSlideUp {
+    from { transform: translateY(30px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
 
-/* Page Fade-In and Fade-Out Transitions */
-.fade-in {
-    animation: fadeIn 0.5s ease forwards;
+/* Footer Hover */
+footer:hover {
+    background: #1f3353;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
-.fade-out {
-    animation: fadeOut 0.5s ease forwards;
-}
-
-@keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+/* Footer Shadow Animation */
+@keyframes footerShadow {
+    0% { box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); }
+    100% { box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); }
 }
