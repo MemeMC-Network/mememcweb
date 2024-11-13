@@ -1,4 +1,4 @@
-// Extended question set with various difficulty levels
+// Extended question set with various difficulty levels!
 const questions = [
     { question: "5 + 3", answer: 8 },
     { question: "12 - 4", answer: 8 },
