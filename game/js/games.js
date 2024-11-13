@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+ document.addEventListener("DOMContentLoaded", function () {
     const gameName = localStorage.getItem("selectedGame");
 
     const gameUrls = {
@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "game13": "https://spew45.github.io/simple-games-assets/src/soccer-random/",
         "game14": "https://swordslasher.com/games/ugi7ftbv2kgodcq7vful9u9v34wein5z/index.html",
         "game16": "https://hypackel.github.io/fork/0/g/stickmanhook/game/index.html",
-        "game17": "https://swordslasher.com/games/ngon/game.html"
+        "game17": "https://swordslasher.com/games/ngon/game.html",
+        "game18": "https://class811.github.io/g/gunspin/"
     };
 
     const iframe = document.getElementById("gameFrame");
