@@ -1,4 +1,4 @@
-// Extended question set with easy, medium, and difficult questions
+// Extended question set with various difficulty levels
 const questions = [
     { question: "5 + 3", answer: 8 },
     { question: "12 - 4", answer: 8 },
@@ -56,7 +56,7 @@ function updateProgressBar() {
     progressBar.style.width = `${progress}%`;
 }
 
-submitButton.addEventListener('click', () => {
+function submitAnswer() {
     const userAnswer = Number(userAnswerInput.value);
     const correctAnswer = questions[currentQuestionIndex].answer;
 
@@ -71,6 +71,14 @@ submitButton.addEventListener('click', () => {
 
     currentQuestionIndex++;
     setTimeout(loadQuestion, 1000);
+}
+
+submitButton.addEventListener('click', submitAnswer);
+
+userAnswerInput.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+        submitAnswer();
+    }
 });
 
 restartLink.addEventListener('click', () => {
