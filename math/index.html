@@ -25,7 +25,14 @@
             <div class="nav-container">
                 <h1>Math Mastery</h1>
                 <div class="nav-links">
-                    <button id="select-grade">Select Grade</button>
+                    <div class="dropdown">
+                        <button class="dropbtn" id="select-grade">Select Grade</button>
+                        <div class="dropdown-content">
+                            <div class="grade-card" id="grade-7">7th Grade</div>
+                            <div class="grade-card" id="grade-8">8th Grade</div>
+                            <div class="grade-card" id="grade-9">9th Grade</div>
+                        </div>
+                    </div>
                     <a href="#" id="restart-link">Restart Quiz</a>
                 </div>
             </div>
@@ -54,9 +61,9 @@
         <div class="modal-content">
             <h2>Select Your Grade</h2>
             <div class="grade-cards">
-                <div class="grade-card" id="grade-7">7th Grade</div>
-                <div class="grade-card" id="grade-8">8th Grade</div>
-                <div class="grade-card" id="grade-9">9th Grade</div>
+                <div class="grade-card" id="grade-7-modal">7th Grade</div>
+                <div class="grade-card" id="grade-8-modal">8th Grade</div>
+                <div class="grade-card" id="grade-9-modal">9th Grade</div>
             </div>
         </div>
     </div>
