@@ -7,7 +7,8 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: url('https://source.unsplash.com/1600x900/?abstract,math') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/1600x900/?math,abstract');
+    background-size: cover;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -18,7 +19,7 @@ body {
 /* Navigation Bar */
 nav {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 10px 20px;
 }
 
@@ -26,7 +27,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #fff;
+    color: #ffbe0b;
 }
 
 nav h1 {
@@ -34,14 +35,14 @@ nav h1 {
 }
 
 #restart-link {
-    color: #ffbe0b;
+    color: #ffd166;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
 }
 
 #restart-link:hover {
-    color: #ffd166;
+    color: #ffbe0b;
 }
 
 /* Main Container */
@@ -54,37 +55,45 @@ nav h1 {
 }
 
 .quiz-container {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     text-align: center;
     width: 350px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 15px 0;
     border: none;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 button {
     width: 100%;
-    padding: 10px;
-    background-color: #ff006e;
-    color: #fff;
+    padding: 12px;
+    background-color: #00f5d4;
+    color: #333;
     border: none;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background-color: #d90429;
+    background-color: #06d6a0;
+    transform: translateY(-2px);
 }
 
 #feedback {
@@ -103,7 +112,7 @@ button:hover {
 #progress-bar {
     height: 100%;
     width: 0;
-    background-color: #00f5d4;
+    background-color: #ff006e;
     border-radius: 5px;
     transition: width 0.3s;
 }
