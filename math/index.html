@@ -1,63 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Math Mastery Quiz</title>
-<link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Mastery Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- Home Screen -->
-<div id="home-screen" class="home-screen">
-    <h1>Welcome to Math Mastery</h1>
-    <p>Select your grade to start the quiz!</p>
-    <div class="home-screen-buttons">
-        <div class="grade-card" id="home-grade-7">7th Grade</div>
-        <div class="grade-card" id="home-grade-8">8th Grade</div>
-        <div class="grade-card" id="home-grade-9">9th Grade</div>
-    </div>
-</div>
-
-<!-- Quiz Screen -->
-<div id="quiz-screen" class="quiz-screen">
-    <nav>
-        <div class="nav-container">
-            <h1>Math Mastery</h1>
-            <div class="nav-links">
-                <button id="select-grade">Select Grade</button>
-                <a href="#" id="restart-link">Restart Quiz</a>
-            </div>
-        </div>
-    </nav>
-    <div class="main-container">
-        <div class="quiz-container">
-            <h2 id="question-text">Loading question...</h2>
-            <input type="number" id="user-answer" placeholder="Enter your answer">
-            <button id="submit-button">Submit</button>
-            <p id="feedback"></p>
-            <div id="progress-bar-container">
-                <div id="progress-bar"></div>
-            </div>
-            <div id="progress-container">
-                <p>Question <span id="current-question-number">1</span> of <span id="total-questions"></span></p>
-            </div>
+    <!-- Home Screen -->
+    <div id="home-screen" class="home-screen">
+        <h1>Welcome to Math Mastery</h1>
+        <p>Select your grade to start the quiz!</p>
+        <div class="home-screen-buttons">
+            <div class="grade-card" id="home-grade-7">7th Grade</div>
+            <div class="grade-card" id="home-grade-8">8th Grade</div>
+            <div class="grade-card" id="home-grade-9">9th Grade</div>
         </div>
     </div>
-</div>
 
-<!-- Grade Selection Modal -->
-<div id="grade-selection-modal" class="modal">
-    <div class="modal-content">
-        <h2>Select Your Grade</h2>
-        <div class="grade-cards">
-            <div class="grade-card" id="grade-7">7th Grade</div>
-            <div class="grade-card" id="grade-8">8th Grade</div>
-            <div class="grade-card" id="grade-9">9th Grade</div>
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="quiz-screen">
+        <nav>
+            <div class="nav-container">
+                <h1>Math Mastery</h1>
+                <div class="nav-links">
+                    <button id="select-grade">Select Grade</button>
+                    <a href="#" id="restart-link">Restart Quiz</a>
+                </div>
+            </div>
+        </nav>
+        <div class="main-container">
+            <div class="quiz-container">
+                <h2 id="question-text">Loading question...</h2>
+                <input type="number" id="user-answer" placeholder="Enter your answer">
+                <button id="submit-button">Submit</button>
+                <p id="feedback"></p>
+                <div id="progress-bar-container">
+                    <div id="progress-bar"></div>
+                </div>
+                <div id="progress-container">
+                    <p>Question <span id="current-question-number">1</span> of <span id="total-questions"></span></p>
+                </div>
+                <div id="timer-container">
+                    <p id="timer">Time Left: 60</p>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
-<script src="script.js"></script>
+    <!-- Grade Selection Modal -->
+    <div id="grade-selection-modal" class="modal">
+        <div class="modal-content">
+            <h2>Select Your Grade</h2>
+            <div class="grade-cards">
+                <div class="grade-card" id="grade-7">7th Grade</div>
+                <div class="grade-card" id="grade-8">8th Grade</div>
+                <div class="grade-card" id="grade-9">9th Grade</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
