@@ -1,4 +1,4 @@
-// Question data
+// Question data!
 const grade7Questions = [
     { question: "7 + 3", answer: 10 },
     { question: "12 - 4", answer: 8 },
