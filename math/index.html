@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Learning Website</title>
+    <title>Math Mastery</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <h1>Math Mastery</h1>
+        <h1 class="logo">Math Mastery</h1>
         <ul class="nav-links">
             <li id="select-grade">Select Grade</li>
             <li id="mastery-tracker">Mastery</li>
@@ -19,7 +19,7 @@
     <!-- Home Screen -->
     <div id="home-screen">
         <h2>Choose Your Grade</h2>
-        <div class="grade-buttons">
+        <div class="grade-container">
             <button class="grade-button" data-grade="1">1st Grade</button>
             <button class="grade-button" data-grade="2">2nd Grade</button>
             <button class="grade-button" data-grade="3">3rd Grade</button>
@@ -35,15 +35,15 @@
     <!-- Skills Screen -->
     <div id="skills-screen" class="hidden">
         <h2>Select a Skill</h2>
-        <div class="skills-list" id="skills-list"></div>
-        <button id="back-to-home">Back</button>
+        <div id="skills-list" class="skills-container"></div>
+        <button id="back-to-home" class="action-button">Back</button>
     </div>
 
     <!-- Quiz Screen -->
     <div id="quiz-screen" class="hidden">
         <h2 id="question-text"></h2>
         <input type="text" id="user-answer" placeholder="Enter your answer">
-        <button id="submit-button">Submit</button>
+        <button id="submit-button" class="action-button">Submit</button>
         <p id="feedback"></p>
         <div id="progress-bar-container">
             <div id="progress-bar"></div>
