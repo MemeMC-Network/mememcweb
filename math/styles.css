@@ -1,4 +1,3 @@
-/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +6,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/1600x900/?math,abstract');
-    background-size: cover;
+    background: linear-gradient(120deg, #00c6ff, #0072ff);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -27,31 +25,18 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.nav-links a {
     color: #ffbe0b;
-}
-
-nav h1 {
-    font-weight: 500;
-}
-
-#restart-link {
-    color: #ffd166;
     text-decoration: none;
+    margin: 0 15px;
     font-weight: 500;
     transition: color 0.3s;
 }
 
-#restart-link:hover {
-    color: #ffbe0b;
-}
-
-/* Main Container */
-.main-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    padding: 20px;
+.nav-links a:hover {
+    color: #ffd166;
 }
 
 .quiz-container {
@@ -69,15 +54,6 @@ nav h1 {
     to { opacity: 1; transform: scale(1); }
 }
 
-input {
-    width: 100%;
-    padding: 12px;
-    margin: 15px 0;
-    border: none;
-    border-radius: 10px;
-    font-size: 18px;
-}
-
 button {
     width: 100%;
     padding: 12px;
@@ -86,14 +62,11 @@ button {
     border: none;
     border-radius: 10px;
     font-size: 18px;
-    font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
     background-color: #06d6a0;
-    transform: translateY(-2px);
 }
 
 #feedback {
