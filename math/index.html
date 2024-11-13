@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Math Mastery Quiz</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav>
+    <div class="nav-container">
+        <h1>Math Mastery</h1>
+        <a href="#" id="restart-link">Restart Quiz</a>
+    </div>
+</nav>
+<div class="main-container">
+    <div class="quiz-container">
+        <h2 id="question-text">Loading question...</h2>
+        <input type="number" id="user-answer" placeholder="Enter your answer">
+        <button id="submit-button">Submit</button>
+        <p id="feedback"></p>
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+        <div id="progress-container">
+            <p>Question <span id="current-question-number">1</span> of <span id="total-questions"></span></p>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
