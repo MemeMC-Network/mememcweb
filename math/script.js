@@ -1,28 +1,28 @@
-// Question sets for each grade level
+// Question data
 const grade7Questions = [
-    { question: "5 + 3", answer: 8 },
-    { question: "12 - 4", answer: 8 },
-    { question: "7 * 2", answer: 14 },
-    { question: "50 / 5", answer: 10 },
-    { question: "100 - 37", answer: 63 },
+    { question: "7 + 5", answer: 12 },
+    { question: "15 - 6", answer: 9 },
+    { question: "4 * 6", answer: 24 },
     { question: "36 / 6", answer: 6 },
-    { question: "45 + 20", answer: 65 },
-    { question: "90 - 50", answer: 40 },
-    { question: "9 * 7", answer: 63 },
-    { question: "72 / 8", answer: 9 },
+    { question: "9 * 3", answer: 27 },
+    { question: "12 + 9", answer: 21 },
+    { question: "81 / 9", answer: 9 },
+    { question: "50 * 2", answer: 100 },
+    { question: "63 - 7", answer: 56 },
+    { question: "14 + 6", answer: 20 }
 ];
 
 const grade8Questions = [
-    { question: "3x = 15; Solve for x", answer: 5 },
-    { question: "x / 4 = 6; Solve for x", answer: 24 },
-    { question: "8 * 7", answer: 56 },
-    { question: "121 / 11", answer: 11 },
-    { question: "72 / 9", answer: 8 },
-    { question: "81 + 19", answer: 100 },
-    { question: "50 * 2", answer: 100 },
-    { question: "35 + 45", answer: 80 },
-    { question: "63 / 9", answer: 7 },
+    { question: "36 + 24", answer: 60 },
+    { question: "25 * 4", answer: 100 },
+    { question: "81 / 9", answer: 9 },
     { question: "100 - 58", answer: 42 },
+    { question: "72 / 8", answer: 9 },
+    { question: "56 + 14", answer: 70 },
+    { question: "7 * 13", answer: 91 },
+    { question: "45 + 32", answer: 77 },
+    { question: "18 * 3", answer: 54 },
+    { question: "63 / 7", answer: 9 }
 ];
 
 const grade9Questions = [
@@ -62,20 +62,7 @@ const selectGradeButton = document.getElementById('select-grade');
 const gradeSelectionModal = document.getElementById('grade-selection-modal');
 const timerDisplay = document.getElementById('timer');
 
-// Function to start the timer
-function startTimer() {
-    timer = setInterval(() => {
-        if (timeRemaining > 0) {
-            timeRemaining--;
-            timerDisplay.textContent = `Time Left: ${timeRemaining}`;
-        } else {
-            clearInterval(timer);
-            feedbackText.textContent = "Time's up!";
-        }
-    }, 1000);
-}
-
-// Load questions and start quiz
+// Load selected questions
 function loadQuestions(questions) {
     currentQuestions = questions;
     currentQuestionIndex = 0;
@@ -118,26 +105,36 @@ function submitAnswer() {
     }
 }
 
+// Start timer
+function startTimer() {
+    timer = setInterval(() => {
+        if (timeRemaining > 0) {
+            timeRemaining--;
+            timerDisplay.textContent = `Time Left: ${timeRemaining}`;
+        } else {
+            clearInterval(timer);
+            feedbackText.textContent = "Time's up!";
+        }
+    }, 1000);
+}
+
 // Event listeners
 grade7CardHome.addEventListener('click', () => loadQuestions(grade7Questions));
 grade8CardHome.addEventListener('click', () => loadQuestions(grade8Questions));
 grade9CardHome.addEventListener('click', () => loadQuestions(grade9Questions));
-
 grade7CardModal.addEventListener('click', () => loadQuestions(grade7Questions));
 grade8CardModal.addEventListener('click', () => loadQuestions(grade8Questions));
 grade9CardModal.addEventListener('click', () => loadQuestions(grade9Questions));
-
 restartLink.addEventListener('click', () => {
     quizScreen.style.display = 'none';
     homeScreen.style.display = 'flex';
     clearInterval(timer);
 });
 
+// Select grade button dropdown functionality
 selectGradeButton.addEventListener('click', () => {
-    gradeSelectionModal.classList.add('active');
+    gradeSelectionModal.classList.toggle('active');
 });
-
-document.getElementById('home-screen').style.display = 'flex';
 
 // Submit answer on Enter key press
 userAnswerInput.addEventListener('keydown', (event) => {
@@ -147,3 +144,6 @@ userAnswerInput.addEventListener('keydown', (event) => {
 });
 
 submitButton.addEventListener('click', submitAnswer);
+
+// Initialize the app with the home screen visible
+document.getElementById('home-screen').style.display = 'flex';
