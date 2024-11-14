@@ -54,6 +54,7 @@ body, html {
 .button-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 20px;
     margin-top: 20px;
 }
@@ -68,6 +69,8 @@ body, html {
     border-radius: 12px;
     cursor: pointer;
     transition: background 0.3s, color 0.3s, transform 0.3s;
+    text-align: center;
+    width: 180px;
 }
 
 .nav-button:hover {
