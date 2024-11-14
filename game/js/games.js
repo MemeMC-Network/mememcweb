@@ -1,4 +1,4 @@
- document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const gameName = localStorage.getItem("selectedGame");
 
     const gameUrls = {
@@ -27,4 +27,15 @@
 
 function goBack() {
     window.location.href = "index.html";
+}
+
+function toggleFullScreen() {
+    const iframe = document.getElementById("gameFrame");
+    if (!document.fullscreenElement) {
+        iframe.requestFullscreen().catch(err => {
+            alert(`Error attempting to enable full-screen mode: ${err.message}`);
+        });
+    } else {
+        document.exitFullscreen();
+    }
 }
