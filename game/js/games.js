@@ -39,3 +39,4 @@ function toggleFullScreen() {
         document.exitFullscreen();
     }
 }
+
