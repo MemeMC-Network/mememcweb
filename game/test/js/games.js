@@ -1,9 +1,23 @@
-// games.js
+// Game Javascript
+// www.mememc.club/game/test
 
 const games = [
     { id: "game1", title: "Connect Four", url: "https://kenrick95.github.io/c4/", thumbnail: "images/connect-four.jpg" },
     { id: "game2", title: "Drift Hunters", url: "https://class811.github.io/g/drift-hunters", thumbnail: "images/drift-hunters.jpg" },
     { id: "game3", title: "Tiny Fishing", url: "https://class811.github.io/g/tiny-fishing/", thumbnail: "images/tiny-fishing.jpg" },
+    { id: "game4", title: "Skibidi Shooter", url: "https://class811.github.io/g177/skibidi-shooter/", thumbnail: "images/skibidi-shooter.jpg" },
+    { id: "game5", title: "OvO", url: "https://class811.github.io/g/ovo/", thumbnail: "images/ovo.jpg" },
+    { id: "game6", title: "Stick Merge", url: "https://class811.github.io/g3/stick-merge/", thumbnail: "images/stick-merge.jpg" },
+    { id: "game7", title: "Slope", url: "https://firespread01.github.io/slope/", thumbnail: "images/slope.jpg" },
+    { id: "game9", title: "Cluster Rush", url: "https://script.google.com/a/macros/my.npsct.org/s/AKfycbw6e8fflbfydV7kom5id09nKaM6ix0hLlXHbs3XHOnxzrndUgPtHUHENrwKomI2Hpk3/exec/", thumbnail: "images/cluster-rush.jpg" },
+    { id: "game10", title: "Burrito Bison", url: "https://burritobisononline.github.io/file/", thumbnail: "images/burrito-bison.jpg" },
+    { id: "game11", title: "Rooftop Snipers", url: "https://spew45.github.io/simple-games-assets/src/rooftop-snipers/", thumbnail: "images/rooftop-snipers.jpg" },
+    { id: "game12", title: "Basketball Random", url: "https://spew45.github.io/simple-games-assets/src/basket-random/", thumbnail: "images/basket-random.jpg" },
+    { id: "game13", title: "Soccer Random", url: "https://spew45.github.io/simple-games-assets/src/soccer-random/", thumbnail: "images/soccer-random.jpg" },
+    { id: "game14", title: "MonkeyMart", url: "https://swordslasher.com/games/ugi7ftbv2kgodcq7vful9u9v34wein5z/index.html/", thumbnail: "images/monkeymart.jpg" },
+    { id: "game15", title: "Stickman Hook", url: "https://hypackel.github.io/fork/0/g/stickmanhook/game/index.html/", thumbnail: "images/stickman-hook.jpg" },
+    { id: "game16", title: "N-Gon", url: "https://swordslasher.com/games/ngon/game.html/", thumbnail: "images/ngon.jpg" },
+    { id: "game17", title: "Gun Spin", url: "https://class811.github.io/g/gunspin/", thumbnail: "images/gunspin.jpg" }
     // Add more games as necessary
 ];
 
