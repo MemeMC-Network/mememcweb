@@ -1,4 +1,5 @@
-// main.js
+// Main Javascript
+// www.mememc.club/game/test
 
 document.addEventListener("DOMContentLoaded", () => {
     const game = JSON.parse(localStorage.getItem("selectedGame"));
