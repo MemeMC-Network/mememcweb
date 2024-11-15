@@ -1,6 +1,5 @@
 // Main Javascript
 // www.mememc.club/game/test
-
 document.addEventListener("DOMContentLoaded", () => {
     const game = JSON.parse(localStorage.getItem("selectedGame"));
     if (game) {
@@ -8,31 +7,21 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("gameTitle").textContent = game.title;
     }
     displayReviews(game.id);
+
+    // Back to Game List
+    document.getElementById("backToList").addEventListener("click", () => {
+        window.location.href = "index.html";
+    });
+
+    // Fullscreen Toggle
+    const gameFrame = document.getElementById("gameFrame");
+    document.getElementById("fullscreenToggle").addEventListener("click", () => {
+        if (!document.fullscreenElement) {
+            gameFrame.requestFullscreen().catch(err => {
+                alert(`Error attempting to enable fullscreen mode: ${err.message}`);
+            });
+        } else {
+            document.exitFullscreen();
+        }
+    });
 });
-
-// Submit review
-function submitReview(gameId) {
-    const username = prompt("Enter your username:");
-    if (!username) return;
-    const rating = prompt("Enter your rating (1-5):");
-    const comment = prompt("Enter your comment:");
-    if (!rating || !comment) return;
-
-    const review = { username, rating: parseInt(rating), comment };
-    let reviews = JSON.parse(localStorage.getItem(`reviews_${gameId}`)) || [];
-    reviews.push(review);
-    localStorage.setItem(`reviews_${gameId}`, JSON.stringify(reviews));
-    displayReviews(gameId);
-}
-
-// Display reviews
-function displayReviews(gameId) {
-    const reviewsContainer = document.getElementById("reviews");
-    const reviews = JSON.parse(localStorage.getItem(`reviews_${gameId}`)) || [];
-    reviewsContainer.innerHTML = reviews.map(review =>
-        `<div class="review">
-            <strong>${review.username}</strong> rated ${review.rating}/5
-            <p>${review.comment}</p>
-        </div>`
-    ).join("");
-}
