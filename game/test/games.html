@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemeMC | Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <iframe id="gameFrame" width="100%" height="600"></iframe>
+        <h1 id="gameTitle"></h1>
+
+        <div id="reviewsContainer">
+            <h2>Game Reviews</h2>
+            <button onclick="submitReview(game.id)">Leave a Review</button>
+            <div id="reviews"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 MemeMC. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
