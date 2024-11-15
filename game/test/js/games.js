@@ -2,22 +2,22 @@
 // www.mememc.club/game/test
 
 const games = [
-    { id: "game1", title: "Connect Four", url: "https://kenrick95.github.io/c4/", thumbnail: "images/connect-four.jpg" },
-    { id: "game2", title: "Drift Hunters", url: "https://class811.github.io/g/drift-hunters", thumbnail: "images/drift-hunters.jpg" },
-    { id: "game3", title: "Tiny Fishing", url: "https://class811.github.io/g/tiny-fishing/", thumbnail: "images/tiny-fishing.jpg" },
-    { id: "game4", title: "Skibidi Shooter", url: "https://class811.github.io/g177/skibidi-shooter/", thumbnail: "images/skibidi-shooter.jpg" },
-    { id: "game5", title: "OvO", url: "https://class811.github.io/g/ovo/", thumbnail: "images/ovo.jpg" },
-    { id: "game6", title: "Stick Merge", url: "https://class811.github.io/g3/stick-merge/", thumbnail: "images/stick-merge.jpg" },
-    { id: "game7", title: "Slope", url: "https://firespread01.github.io/slope/", thumbnail: "images/slope.jpg" },
+    { id: "game1", title: "Connect Four", url: "https://kenrick95.github.io/c4/", thumbnail: "https://play-lh.googleusercontent.com/lZr9XlmL3TWpwqMDI_WF5k_ud9UeVW6QLzAnb17_bsyjfJBIGZxDLfLEN2AqCW2JD9A" },
+    { id: "game2", title: "Drift Hunters", url: "https://class811.github.io/g/drift-hunters", thumbnail: "https://m.media-amazon.com/images/I/91SfPYITE-L.png" },
+    { id: "game3", title: "Tiny Fishing", url: "https://class811.github.io/g/tiny-fishing/", thumbnail: "https://play-lh.googleusercontent.com/XmnVxmSzSX94xpkQep8zCUh7AZ9kNsplSRE-DH5s6UYjCKWfr-pzjD-86NqLm3uFLbKO" },
+    { id: "game4", title: "Skibidi Shooter", url: "https://class811.github.io/g177/skibidi-shooter/", thumbnail: "https://cdn-1.webcatalog.io/catalog/poki-skibidi-shooter/poki-skibidi-shooter-icon-filled-256.png?v=1714781386807" },
+    { id: "game5", title: "OvO", url: "https://class811.github.io/g/ovo/", thumbnail: "https://play-lh.googleusercontent.com/v7KwGdPjJGjJjRXn46sck4DwDBdKSeRzGN44CjiXUtKV0jjOi51Bt4wcXud0m-SkXg" },
+    { id: "game6", title: "Stick Merge", url: "https://class811.github.io/g3/stick-merge/", thumbnail: "https://www.virlan.co/unblocked-games/wp-content/uploads/2022/08/stick-merge-game.jpg" },
+    { id: "game7", title: "Slope", url: "https://firespread01.github.io/slope/", thumbnail: "https://play-lh.googleusercontent.com/uJn2i9h7KxYQarC_c3K4qH6o7gLtflFnhD_dN14MNkzHJ1NeNFzCL69jpB5mT0vCoQs" },
     { id: "game9", title: "Cluster Rush", url: "https://script.google.com/a/macros/my.npsct.org/s/AKfycbw6e8fflbfydV7kom5id09nKaM6ix0hLlXHbs3XHOnxzrndUgPtHUHENrwKomI2Hpk3/exec/", thumbnail: "images/cluster-rush.jpg" },
-    { id: "game10", title: "Burrito Bison", url: "https://burritobisononline.github.io/file/", thumbnail: "images/burrito-bison.jpg" },
-    { id: "game11", title: "Rooftop Snipers", url: "https://spew45.github.io/simple-games-assets/src/rooftop-snipers/", thumbnail: "images/rooftop-snipers.jpg" },
-    { id: "game12", title: "Basketball Random", url: "https://spew45.github.io/simple-games-assets/src/basket-random/", thumbnail: "images/basket-random.jpg" },
-    { id: "game13", title: "Soccer Random", url: "https://spew45.github.io/simple-games-assets/src/soccer-random/", thumbnail: "images/soccer-random.jpg" },
-    { id: "game14", title: "MonkeyMart", url: "https://swordslasher.com/games/ugi7ftbv2kgodcq7vful9u9v34wein5z/index.html/", thumbnail: "images/monkeymart.jpg" },
-    { id: "game15", title: "Stickman Hook", url: "https://hypackel.github.io/fork/0/g/stickmanhook/game/index.html/", thumbnail: "images/stickman-hook.jpg" },
-    { id: "game16", title: "N-Gon", url: "https://swordslasher.com/games/ngon/game.html/", thumbnail: "images/ngon.jpg" },
-    { id: "game17", title: "Gun Spin", url: "https://class811.github.io/g/gunspin/", thumbnail: "images/gunspin.jpg" }
+    { id: "game10", title: "Burrito Bison", url: "https://burritobisononline.github.io/file/", thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6tzXZodkuIxTTRNsOdrTGtPs4Szg08kFlrQ&s" },
+    { id: "game11", title: "Rooftop Snipers", url: "https://spew45.github.io/simple-games-assets/src/rooftop-snipers/", thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKY2uliGeNKbqaj4zsKGgQih6z4WKF7mgkew&s" },
+    { id: "game12", title: "Basketball Random", url: "https://spew45.github.io/simple-games-assets/src/basket-random/", thumbnail: "https://play-lh.googleusercontent.com/gP8T5Z1O-ngxIloiwcBZzrzyLPYDp0R_1BDNKUDZboIRPVImeyWI8-7aExvB9gAGNKc" },
+    { id: "game13", title: "Soccer Random", url: "https://spew45.github.io/simple-games-assets/src/soccer-random/", thumbnail: "https://play-lh.googleusercontent.com/G1PIlb6HWKSaDre0XpUcmKGps9T4iamsSlwrogB3EJzYv4bz0M2am4D17MtGzndaOOU" },
+    { id: "game14", title: "MonkeyMart", url: "https://swordslasher.com/games/ugi7ftbv2kgodcq7vful9u9v34wein5z/index.html/", thumbnail: "https://monkey-mart.io/wp-content/uploads/2023/06/monkey-mart.png" },
+    { id: "game15", title: "Stickman Hook", url: "https://hypackel.github.io/fork/0/g/stickmanhook/game/index.html/", thumbnail: "https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/99e090d154caf30f3625df7e456d5984.png" },
+    { id: "game16", title: "N-Gon", url: "https://swordslasher.com/games/ngon/game.html/", thumbnail: "https://repository-images.githubusercontent.com/493354908/d15c0322-7cac-410f-8526-ddcbf2a16ec9" },
+    { id: "game17", title: "Gun Spin", url: "https://class811.github.io/g/gunspin/", thumbnail: "https://play-lh.googleusercontent.com/fLqvWSVq5rENEvu32xl0hf96wwSHVwQm-_9xc6KZg9Vgv9PbAtf1CyBYW7i1mlAXoSA" }
     // Add more games as necessary
 ];
 
