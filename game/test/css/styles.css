@@ -1,4 +1,4 @@
-/* General styles */
+/* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -6,57 +6,93 @@ body {
     background-color: #f7f7f7;
     color: #333;
     transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Header and Footer */
-header {
+header, footer {
     background-color: #ff8c00;
-    padding: 10px 20px;
-    text-align: center;
     color: white;
+    text-align: center;
+    padding: 15px;
+    transition: background-color 0.3s;
+}
+
+header .header-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+header .nav-button, .search-bar {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: none;
+}
+
+.search-bar {
+    width: 200px;
+    border: 1px solid #ccc;
+    margin-left: 10px;
 }
 
 footer {
-    background-color: #ff8c00;
-    color: white;
-    padding: 10px;
-    text-align: center;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
 
-/* Game Container */
-.game-container {
-    text-align: center;
+/* Game Gallery */
+.game-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
     padding: 20px;
-    animation: slideIn 0.5s ease-in-out;
+    animation: fadeIn 1s ease;
 }
 
-/* Nav Buttons */
-.nav-button {
-    padding: 10px 15px;
-    background-color: #ff8c00;
-    color: white;
-    border: none;
-    border-radius: 5px;
+/* Game Cards */
+.game-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    margin: 10px;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.nav-button:hover {
-    background-color: #f75c00;
-    transform: scale(1.05);
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Fullscreen */
-#fullscreenToggle {
-    display: inline-block;
-    margin-bottom: 20px;
+.game-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.game-card .game-title {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
 }
 
 /* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes slideIn {
     0% {
         transform: translateY(-100%);
@@ -68,43 +104,94 @@ footer {
     }
 }
 
-/* Improved Game Cards */
-.game-card {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 200px;
-    margin: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.game-card:hover {
-    transform: scale(1.08);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Reviews Section */
-.review {
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    padding: 10px;
+/* Buttons */
+.nav-button {
+    background-color: #ff8c00;
+    color: white;
+    padding: 10px 15px;
     border-radius: 5px;
-    background-color: #f7f7f7;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-/* Dark Mode Enhancements */
+.nav-button:hover {
+    background-color: #f75c00;
+    transform: scale(1.05);
+}
+
+/* Dark Mode */
 body.dark-mode {
     background: #1a1a2e;
     color: #e0e0e0;
 }
 
-.dark-mode .nav-button {
-    background-color: #333;
-}
-
 .dark-mode .game-card {
     background-color: #333;
     color: #e0e0e0;
+}
+
+.dark-mode header, .dark-mode footer {
+    background-color: #222;
+}
+
+.dark-mode .nav-button {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+.dark-mode .game-card:hover {
+    background-color: #444;
+}
+
+.dark-mode .search-bar {
+    border: 1px solid #444;
+}
+
+/* Reviews Section */
+.reviews-section {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.reviews-section .review-btn {
+    background-color: #ff8c00;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.reviews-section .review-btn:hover {
+    background-color: #f75c00;
+    transform: scale(1.05);
+}
+
+/* Game Page Layout */
+.game-page {
+    padding: 20px;
+    text-align: center;
+}
+
+.game-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.game-container iframe {
+    border-radius: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .game-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
 }
