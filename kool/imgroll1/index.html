@@ -27,7 +27,7 @@
             height: 100%;
             object-fit: cover;
             opacity: 0;
-            transition: opacity 1s ease-in-out;
+            transition: opacity 1.75s ease-in-out;
         }
 
         .slider img.active {
@@ -40,7 +40,6 @@
         <img src="image1.png" class="active" alt="Image 1">
         <img src="image2.png" alt="Image 2">
         <img src="image3.png" alt="Image 3">
-        <img src="image4.png" alt="Image 4">
     </div>
 
     <script>
@@ -51,7 +50,7 @@
             images[currentIndex].classList.remove('active');
             currentIndex = (currentIndex + 1) % images.length;
             images[currentIndex].classList.add('active');
-        }, 22000); // Change image every 22 seconds
+        }, 19500); // Change image every 19.5 seconds
     </script>
 </body>
 </html>
