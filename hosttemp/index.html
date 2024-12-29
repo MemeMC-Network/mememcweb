@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Hosting Company</title>
+    <title>Kyrll Host</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
@@ -15,7 +15,6 @@
         }
         header {
             background: linear-gradient(90deg, #4CAF50, #45A049);
-            color: #fff;
             padding: 1rem 0;
             position: sticky;
             top: 0;
@@ -28,22 +27,29 @@
             max-width: 1200px;
             margin: 0 auto;
         }
+        .logo img {
+            display: block;
+            margin: 0 auto;
+            max-height: 50px;
+        }
         nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
             gap: 20px;
+            padding: 0;
         }
         nav ul li a {
             color: #fff;
             text-decoration: none;
-            padding: 5px 10px;
+            padding: 10px 15px;
+            font-weight: 600;
+            border-radius: 20px;
             transition: background 0.3s, color 0.3s;
         }
         nav ul li a:hover {
             background: #fff;
             color: #4CAF50;
-            border-radius: 5px;
         }
         #hero {
             background: linear-gradient(90deg, #007BFF, #0056D2);
@@ -54,13 +60,15 @@
         }
         #hero h2 {
             font-size: 2.5rem;
+            font-weight: 700;
         }
         .cta-button {
             background: #FFA500;
             color: #fff;
             padding: 10px 20px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 30px;
+            font-weight: bold;
             transition: transform 0.3s, background 0.3s;
         }
         .cta-button:hover {
@@ -93,6 +101,22 @@
             padding: 1rem 0;
             margin-top: 2rem;
             animation: slideInUp 0.5s ease-out;
+        }
+        footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 0;
+        }
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        footer ul li a:hover {
+            color: #4CAF50;
         }
         @keyframes fadeInHero {
             from {
@@ -139,12 +163,13 @@
             }
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo">
-                <h1>Kyrll Host</h1>
+                <img src="logo.png" alt="Kyrll Host Logo">
             </div>
             <nav>
                 <ul>
@@ -198,7 +223,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Kyrll Host All Rights Reserved.</p>
+            <p>&copy; 2024 Kyrll Host. All Rights Reserved.</p>
             <ul class="social-links">
                 <li><a href="#">Facebook</a></li>
                 <li><a href="#">Twitter</a></li>
